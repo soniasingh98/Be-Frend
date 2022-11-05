@@ -44,6 +44,11 @@
        }
     </style>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="http://static.tmimgcdn.com/img/favicon.ico">
+  <link rel="icon" href="http://static.tmimgcdn.com/img/favicon.ico">
+  <link rel="stylesheet" type="text/css" media="all" href="screenshots/css/styles.css">
+  <script type="text/javascript" src="screenshots/js/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="screenshots/js/responsiveCarousel.min.js"></script>
   </head>
   <body>
     <div>
@@ -71,7 +76,7 @@
                 </svg>
               </div>
             </div>
-            <div class="home-desktop-navigation">
+            <div id="hdn" class="home-desktop-navigation">
               <nav class="home-centered">
                 <div class="home-left">
                   <img
@@ -83,7 +88,7 @@
                     <span class="Link">Our Solution</span>
                     <span class="Link">Timeline</span>
                     <span class="Link">Product Demo</span>
-                    <span class="Link">Team</span>
+                    <span class="Link"><a href="#team">Team</a></span>
                   </div>
                 </div>
                 <div class="home-right">
@@ -262,10 +267,86 @@
               <span class="home-text032">
                 Screenshots of our app running in real world
               </span>
-              <div class="home-selection"></div>
+              <div id="w">
+    
+                <div class="crsl-items" data-navigation="navbtns">
+                  <div class="crsl-wrap">
+                    <div class="crsl-item">
+                      <div class="thumbnail">
+                        <img src="public/playground_assets/Apple iPhone 11 Pro Max Screenshot 0.png" alt="nyc subway">
+                      </div>
+                    </div><!-- post #1 -->
+                    
+                    <div class="crsl-item">
+                      <div class="thumbnail">
+                        <img src="public/playground_assets/Apple iPhone 11 Pro Max Screenshot 1.png" alt="danny antonucci">
+            
+                      </div>
+                    </div><!-- post #2 -->
+                    
+                    <div class="crsl-item">
+                      <div class="thumbnail">
+                        <img src="public/playground_assets/Apple iPhone 11 Pro Max Screenshot 2.png" alt="watercolor paints">
+                
+                      </div>
+                     
+                    </div><!-- post #3 -->
+                    
+                    <div class="crsl-item">
+                      <div class="thumbnail">
+                        <img src="public/playground_assets/Apple iPhone 11 Pro Max Screenshot 3.png" alt="apple ipod classic photo">
+                      
+                      </div>
+                   
+                    </div><!-- post #4 -->
+                    
+                    <div class="crsl-item">
+                      <div class="thumbnail">
+                        <img src="public/playground_assets/Apple iPhone 11 Pro Max Screenshot 4.png" alt="web design magazines">
+                      </div>
+                    </div><!-- post #5 -->
+                    <div class="crsl-item">
+                      <div class="thumbnail">
+                        <img src="public/playground_assets/Apple iPhone 11 Pro Max Screenshot 5.png" alt="web design magazines">
+                      </div>
+                    </div><!-- post #6 -->
+                    <div class="crsl-item">
+                      <div class="thumbnail">
+                        <img src="public/playground_assets/Apple iPhone 11 Pro Max Screenshot 6.png" alt="web design magazines">
+                      </div>
+                    </div><!-- post #7 -->
+                    <div class="crsl-item">
+                      <div class="thumbnail">
+                        <img src="public/playground_assets/Apple iPhone 11 Pro Max Screenshot 7.png" alt="web design magazines">
+                      </div>
+                    </div><!-- post #8 -->
+                  </div><!-- @end .crsl-wrap -->
+                </div><!-- @end .crsl-items -->
+                <nav class="slidernav">
+                  <div id="navbtns" class="clearfix">
+                    <a href="#" class="previous">prev</a>
+                    <a href="#" class="next">next</a>
+                  </div>
+                </nav>
+                <script type="text/javascript">
+                  $(function(){
+                    $('.crsl-items').carousel({
+                      visible: 3,
+                      itemMinWidth: 180,
+                      itemEqualHeight: 370,
+                      itemMargin: 9,
+                    });
+                    
+                    $("a[href=#]").on('click', function(e) {
+                      e.preventDefault();
+                    });
+                  });
+                  </script>
+              </div><!-- @end #w -->
+              <!-- <div class="home-selection"></div>
             </div>
             <div class="home-cards1"></div>
-          </div>
+          </div> -->
         </section>
         <section class="home-statistics">
           <div class="home-steps">
@@ -609,7 +690,7 @@
             <div class="home-images"></div>
           </div>
         </section>
-        <section class="home-f-a-q">
+        <section id="team" class="home-f-a-q">
           <div class="home-heading3">
             <span class="home-text094 title">Team</span>
             <span class="home-text095">Who we are</span>
@@ -623,7 +704,7 @@
                 <div class="home-container24">
                   <span class="home-text096">AYUSH YADAV</span>
                   <span class="home-text097">aPP DEVELOPER</span>
-                  <span class="home-text098">Android, Kotlin,&nbsp;</span>
+                  <span class="home-text098">Android, Kotlin</span>
                   <div class="home-container25">
                     <div class="home-profile">
                       <a
@@ -737,9 +818,11 @@
             </div>
           </div>
           <div>
-            <script>
+            
               // Accordion - Code Embed
-
+            <script>
+  
+   
               const accordionContainers = document.querySelectorAll(".accordionContainer"); // All accordion containers
               const accordionContents = document.querySelectorAll(".accordionContent"); // All accordion content
               const accordionIcons = document.querySelectorAll(".accordionIcon"); // All accordion icons
