@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BeFrend</title>
+    <meta property="og:title" content="BeFrend" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <style>
+       body::-webkit-scrollbar {
+         width: 0.5em;
+         z-index: 100;
+         background-color:transparent;
+       }
+
+
+      body::-webkit-scrollbar-thumb {
+         background-color:white;
+         box-shadow:0 -100vh 0 100vh #5128f5;//magic
+       }
+    </style>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div>
+      <link href="./home.css" rel="stylesheet" />
+
+      <div class="home-container">
+        <section class="home-hero">
+          <div class="home-menu">
+            <div id="mobile-menu" class="home-mobile-navigation">
+              <img
+                alt="pastedImage"
+                src="public/playground_assets/pastedimage-no9b-1500h.png"
+                class="home-logo"
+              />
+              <div class="home-links">
+                <span class="Link">Solutions</span>
+                <span class="Link">How it works</span>
+                <span class="Link">Prices</span>
+              </div>
+              <div id="close-mobile-menu" class="home-close-mobile-menu">
+                <svg viewBox="0 0 804.5714285714286 1024" class="home-icon">
+                  <path
+                    d="M741.714 755.429c0 14.286-5.714 28.571-16 38.857l-77.714 77.714c-10.286 10.286-24.571 16-38.857 16s-28.571-5.714-38.857-16l-168-168-168 168c-10.286 10.286-24.571 16-38.857 16s-28.571-5.714-38.857-16l-77.714-77.714c-10.286-10.286-16-24.571-16-38.857s5.714-28.571 16-38.857l168-168-168-168c-10.286-10.286-16-24.571-16-38.857s5.714-28.571 16-38.857l77.714-77.714c10.286-10.286 24.571-16 38.857-16s28.571 5.714 38.857 16l168 168 168-168c10.286-10.286 24.571-16 38.857-16s28.571 5.714 38.857 16l77.714 77.714c10.286 10.286 16 24.571 16 38.857s-5.714 28.571-16 38.857l-168 168 168 168c10.286 10.286 16 24.571 16 38.857z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div class="home-desktop-navigation">
+              <nav class="home-centered">
+                <div class="home-left">
+                  <img
+                    alt="pastedImage"
+                    src="public/playground_assets/frame%201-200h.png"
+                    class="home-logo1"
+                  />
+                  <div class="home-links1">
+                    <span class="Link">Our Solution</span>
+                    <span class="Link">Timeline</span>
+                    <span class="Link">Product Demo</span>
+                    <span class="Link">Team</span>
+                  </div>
+                </div>
+                <div class="home-right">
+                  <div class="home-get-started">
+                    <span class="home-text007">Soon on Play Store</span>
+                  </div>
+                  <div id="open-mobile-menu" class="home-burger-menu">
+                    <img
+                      alt="pastedImage"
+                      src="public/playground_assets/pastedimage-yxbd.svg"
+                      class="home-mobile-menu-button"
+                    />
+                  </div>
+                </div>
+              </nav>
+            </div>
+            <div>
+              <script>
+                /*
+                Mobile menu - Code Embed
+                */
+
+                // Mobile menu
+                const mobileMenu = document.querySelector("#mobile-menu")
+
+                // Buttons
+                const closeButton = document.querySelector("#close-mobile-menu")
+                const openButton = document.querySelector("#open-mobile-menu")
+
+                // On openButton click, set the mobileMenu position left to -100vw
+                openButton.addEventListener("click", function() {
+                    mobileMenu.style.transform = "translateX(0%)"
+                })
+
+                // On closeButton click, set the mobileMenu position to 0vw
+                closeButton.addEventListener("click", function() {
+                    mobileMenu.style.transform = "translateX(100%)"
+                })
+              </script>
+            </div>
+          </div>
+          <header class="home-header">
+            <h1 class="home-text008">
+              "You are the average of the Five People you spend the most time
+              with"
+            </h1>
+            <p class="home-text009">
+              But how would you find these 5 people?&nbsp;BeFrend fixes all
+              these problems for you.
+            </p>
+          </header>
+          <div class="home-separator"></div>
+          <div class="home-features">
+            <h1 class="home-text010">Problems</h1>
+            <div class="home-separator1"></div>
+            <div class="home-container01">
+              <div class="home-container02">
+                <div class="home-container03">
+                  <div class="home-feature-card">
+                    <svg viewBox="0 0 1024 1024" class="home-icon02">
+                      <path
+                        d="M809.003 291.328l-297.003 171.819-297.003-171.819 275.456-157.397c4.779-2.731 9.899-4.48 15.147-5.333 9.301-1.451 18.987 0.128 27.904 5.291zM491.776 979.669c6.016 3.243 12.928 5.077 20.224 5.077 7.381 0 14.336-1.877 20.395-5.163 15.189-2.475 29.909-7.68 43.392-15.36l298.709-170.709c26.368-15.232 45.269-38.315 55.424-64.597 5.675-14.592 8.619-30.165 8.747-46.251v-341.333c0-20.395-4.821-39.723-13.397-56.917-0.939-3.029-2.219-5.973-3.883-8.832-1.963-3.371-4.267-6.357-6.912-8.96-1.323-1.835-2.731-3.669-4.139-5.419-9.813-12.203-21.845-22.528-35.456-30.507l-299.051-170.88c-26.027-15.019-55.467-19.84-83.328-15.531-15.531 2.432-30.507 7.637-44.288 15.488l-298.709 170.709c-16.341 9.429-29.824 21.888-40.149 36.267-2.56 2.56-4.864 5.547-6.784 8.832-1.664 2.901-2.987 5.888-3.925 8.96-1.707 3.456-3.243 6.955-4.608 10.496-5.632 14.635-8.576 30.208-8.704 45.995v341.632c0.043 30.293 10.581 58.197 28.331 80.128 9.813 12.203 21.845 22.528 35.456 30.507l299.051 170.88c13.824 7.979 28.587 13.099 43.605 15.445zM469.333 537.045v340.949l-277.12-158.336c-4.736-2.773-8.832-6.315-12.16-10.411-5.931-7.381-9.387-16.512-9.387-26.581v-318.379zM554.667 877.995v-340.949l298.667-172.757v318.379c-0.043 5.163-1.067 10.496-2.987 15.445-3.413 8.789-9.6 16.384-18.176 21.333z"
+                      ></path>
+                    </svg>
+                    <div class="home-container04">
+                      <h2 class="home-text011">
+                        Student of a branch only know people in his/her small
+                        circle .
+                      </h2>
+                    </div>
+                  </div>
+                  <div class="home-feature-card1">
+                    <svg viewBox="0 0 1024 1024" class="home-icon04">
+                      <path
+                        d="M809.003 291.328l-297.003 171.819-297.003-171.819 275.456-157.397c4.779-2.731 9.899-4.48 15.147-5.333 9.301-1.451 18.987 0.128 27.904 5.291zM491.776 979.669c6.016 3.243 12.928 5.077 20.224 5.077 7.381 0 14.336-1.877 20.395-5.163 15.189-2.475 29.909-7.68 43.392-15.36l298.709-170.709c26.368-15.232 45.269-38.315 55.424-64.597 5.675-14.592 8.619-30.165 8.747-46.251v-341.333c0-20.395-4.821-39.723-13.397-56.917-0.939-3.029-2.219-5.973-3.883-8.832-1.963-3.371-4.267-6.357-6.912-8.96-1.323-1.835-2.731-3.669-4.139-5.419-9.813-12.203-21.845-22.528-35.456-30.507l-299.051-170.88c-26.027-15.019-55.467-19.84-83.328-15.531-15.531 2.432-30.507 7.637-44.288 15.488l-298.709 170.709c-16.341 9.429-29.824 21.888-40.149 36.267-2.56 2.56-4.864 5.547-6.784 8.832-1.664 2.901-2.987 5.888-3.925 8.96-1.707 3.456-3.243 6.955-4.608 10.496-5.632 14.635-8.576 30.208-8.704 45.995v341.632c0.043 30.293 10.581 58.197 28.331 80.128 9.813 12.203 21.845 22.528 35.456 30.507l299.051 170.88c13.824 7.979 28.587 13.099 43.605 15.445zM469.333 537.045v340.949l-277.12-158.336c-4.736-2.773-8.832-6.315-12.16-10.411-5.931-7.381-9.387-16.512-9.387-26.581v-318.379zM554.667 877.995v-340.949l298.667-172.757v318.379c-0.043 5.163-1.067 10.496-2.987 15.445-3.413 8.789-9.6 16.384-18.176 21.333z"
+                      ></path>
+                    </svg>
+                    <div class="home-container05">
+                      <h2 class="home-text012">
+                        How would I know who shares the same interests as me?
+                      </h2>
+                    </div>
+                  </div>
+                  <div class="home-feature-card2">
+                    <svg viewBox="0 0 1024 1024" class="home-icon06">
+                      <path
+                        d="M809.003 291.328l-297.003 171.819-297.003-171.819 275.456-157.397c4.779-2.731 9.899-4.48 15.147-5.333 9.301-1.451 18.987 0.128 27.904 5.291zM491.776 979.669c6.016 3.243 12.928 5.077 20.224 5.077 7.381 0 14.336-1.877 20.395-5.163 15.189-2.475 29.909-7.68 43.392-15.36l298.709-170.709c26.368-15.232 45.269-38.315 55.424-64.597 5.675-14.592 8.619-30.165 8.747-46.251v-341.333c0-20.395-4.821-39.723-13.397-56.917-0.939-3.029-2.219-5.973-3.883-8.832-1.963-3.371-4.267-6.357-6.912-8.96-1.323-1.835-2.731-3.669-4.139-5.419-9.813-12.203-21.845-22.528-35.456-30.507l-299.051-170.88c-26.027-15.019-55.467-19.84-83.328-15.531-15.531 2.432-30.507 7.637-44.288 15.488l-298.709 170.709c-16.341 9.429-29.824 21.888-40.149 36.267-2.56 2.56-4.864 5.547-6.784 8.832-1.664 2.901-2.987 5.888-3.925 8.96-1.707 3.456-3.243 6.955-4.608 10.496-5.632 14.635-8.576 30.208-8.704 45.995v341.632c0.043 30.293 10.581 58.197 28.331 80.128 9.813 12.203 21.845 22.528 35.456 30.507l299.051 170.88c13.824 7.979 28.587 13.099 43.605 15.445zM469.333 537.045v340.949l-277.12-158.336c-4.736-2.773-8.832-6.315-12.16-10.411-5.931-7.381-9.387-16.512-9.387-26.581v-318.379zM554.667 877.995v-340.949l298.667-172.757v318.379c-0.043 5.163-1.067 10.496-2.987 15.445-3.413 8.789-9.6 16.384-18.176 21.333z"
+                      ></path>
+                    </svg>
+                    <div class="home-container06">
+                      <h2 class="home-text013">
+                        <span>Not enough exposure and interaction</span>
+                        <br />
+                        <span>don't know some people even exist</span>
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="home-features1">
+          <div class="home-title">
+            <span class="home-text017">
+              Let's increase your productivity by improving your social
+              interaction
+            </span>
+            <span class="home-text018">
+              BeFrend is a product that was designed to help college students
+              find people from their College who have similar interests and
+              skills as them. To Collaborate, Explore &amp; To Build The Future.
+            </span>
+          </div>
+          <div class="home-cards">
+            <div class="home-container07">
+              <div class="card">
+                <img
+                  alt="pastedImage"
+                  src="public/playground_assets/pastedimage-l6p-200h.png"
+                  class="home-icon08"
+                />
+                <span class="home-text019">Discover like-minds</span>
+                <span class="home-text020">
+                  Discover people with same interest &amp; skills. Let's find a
+                  co-founder for your start-up
+                </span>
+              </div>
+              <div class="home-publish card">
+                <img
+                  alt="pastedImage"
+                  src="public/playground_assets/pastedimage-mimg-200h.png"
+                  class="home-icon09"
+                />
+                <span class="home-text021">Exposure</span>
+                <span class="home-text022">
+                  <span class="home-text023">
+                    Express yourself, show case your skills and interests.
+                  </span>
+                  <br />
+                  <span>Your favourite movie or start-up idea.</span>
+                  <br />
+                </span>
+              </div>
+            </div>
+            <div class="home-container08">
+              <div class="card home-analyze">
+                <img
+                  alt="pastedImage"
+                  src="public/playground_assets/pastedimage-vyi5-200h.png"
+                  class="home-icon10"
+                />
+                <span class="home-text027">Build connections</span>
+                <span class="home-text028">
+                  Your network is your net-worth.
+                </span>
+              </div>
+              <div class="card">
+                <img
+                  alt="pastedImage"
+                  src="public/playground_assets/pastedimage-fii6m-200h.png"
+                  class="home-icon11"
+                />
+                <span class="home-text029">Time is money</span>
+                <span class="home-text030">
+                  You can find your target in no-time.
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="home-pricing">
+          <div class="home-centered-container">
+            <div class="home-heading">
+              <span class="home-text031 title">App Screenshots</span>
+              <span class="home-text032">
+                Screenshots of our app running in real world
+              </span>
+              <div class="home-selection"></div>
+            </div>
+            <div class="home-cards1"></div>
+          </div>
+        </section>
+        <section class="home-statistics">
+          <div class="home-steps">
+            <h1 class="home-text033"><span>Discover Our Process</span></h1>
+            <span class="home-text035">This how far we came</span>
+            <div class="home-container09">
+              <div class="home-step">
+                <div class="home-container10">
+                  <div class="home-line"></div>
+                  <div class="home-container11">
+                    <svg viewBox="0 0 1024 1024" class="home-icon12">
+                      <path
+                        d="M634 558q92-64 92-174 0-88-63-151t-151-63-151 63-63 151q0 46 27 96t65 78l36 26v98h172v-98zM512 86q124 0 211 87t87 211q0 156-128 244v98q0 18-12 30t-30 12h-256q-18 0-30-12t-12-30v-98q-128-88-128-244 0-124 87-211t211-87zM384 896v-42h256v42q0 18-12 30t-30 12h-172q-18 0-30-12t-12-30z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="home-line1"></div>
+                </div>
+                <div class="home-container12">
+                  <h1 class="home-text036">Ideate</h1>
+                  <span class="home-text037">
+                    <span>May 2022</span>
+                    <br />
+                  </span>
+                </div>
+              </div>
+              <div class="home-step1">
+                <div class="home-container13">
+                  <div class="home-line2"></div>
+                  <div class="home-container14">
+                    <svg viewBox="0 0 1024 1024" class="home-icon14">
+                      <path
+                        d="M746 512q26 0 45-18t19-46-19-46-45-18-45 18-19 46 19 46 45 18zM618 342q26 0 45-19t19-45-19-45-45-19-45 19-19 45 19 45 45 19zM406 342q26 0 45-19t19-45-19-45-45-19-45 19-19 45 19 45 45 19zM278 512q26 0 45-18t19-46-19-46-45-18-45 18-19 46 19 46 45 18zM512 128q158 0 271 100t113 242q0 88-63 150t-151 62h-74q-28 0-46 19t-18 45q0 22 16 42t16 44q0 28-18 46t-46 18q-160 0-272-112t-112-272 112-272 272-112z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="home-line3"></div>
+                </div>
+                <div class="home-container15">
+                  <h1 class="home-text040">Design</h1>
+                  <span class="home-text041">
+                    <span>May-June 2022</span>
+                    <br />
+                  </span>
+                </div>
+              </div>
+              <div class="home-step2">
+                <div class="home-container16">
+                  <div class="home-line4"></div>
+                  <div class="home-container17">
+                    <svg viewBox="0 0 1024 1024" class="home-icon16">
+                      <path
+                        d="M576 736l96 96 320-320-320-320-96 96 224 224z"
+                      ></path>
+                      <path
+                        d="M448 288l-96-96-320 320 320 320 96-96-224-224z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="home-line5"></div>
+                </div>
+                <div class="home-container18">
+                  <h1 class="home-text044"><span>Develop</span></h1>
+                  <span class="home-text046">
+                    <span>June 2022-Present</span>
+                    <br />
+                  </span>
+                </div>
+              </div>
+              <div class="home-step3">
+                <div class="home-container19">
+                  <div class="home-line6"></div>
+                  <div class="home-container20">
+                    <svg viewBox="0 0 1024 1024" class="home-icon19">
+                      <path
+                        d="M480 64c-265.096 0-480 214.904-480 480 0 265.098 214.904 480 480 480 265.098 0 480-214.902 480-480 0-265.096-214.902-480-480-480zM751.59 704c8.58-40.454 13.996-83.392 15.758-128h127.446c-3.336 44.196-13.624 87.114-30.68 128h-112.524zM208.41 384c-8.58 40.454-13.996 83.392-15.758 128h-127.444c3.336-44.194 13.622-87.114 30.678-128h112.524zM686.036 384c9.614 40.962 15.398 83.854 17.28 128h-191.316v-128h174.036zM512 320v-187.338c14.59 4.246 29.044 11.37 43.228 21.37 26.582 18.74 52.012 47.608 73.54 83.486 14.882 24.802 27.752 52.416 38.496 82.484h-155.264zM331.232 237.516c21.528-35.878 46.956-64.748 73.54-83.486 14.182-10 28.638-17.124 43.228-21.37v187.34h-155.264c10.746-30.066 23.616-57.68 38.496-82.484zM448 384v128h-191.314c1.88-44.146 7.666-87.038 17.278-128h174.036zM95.888 704c-17.056-40.886-27.342-83.804-30.678-128h127.444c1.762 44.608 7.178 87.546 15.758 128h-112.524zM256.686 576h191.314v128h-174.036c-9.612-40.96-15.398-83.854-17.278-128zM448 768v187.34c-14.588-4.246-29.044-11.372-43.228-21.37-26.584-18.74-52.014-47.61-73.54-83.486-14.882-24.804-27.75-52.418-38.498-82.484h155.266zM628.768 850.484c-21.528 35.876-46.958 64.746-73.54 83.486-14.184 9.998-28.638 17.124-43.228 21.37v-187.34h155.266c-10.746 30.066-23.616 57.68-38.498 82.484zM512 704v-128h191.314c-1.88 44.146-7.666 87.040-17.28 128h-174.034zM767.348 512c-1.762-44.608-7.178-87.546-15.758-128h112.524c17.056 40.886 27.344 83.806 30.68 128h-127.446zM830.658 320h-95.9c-18.638-58.762-44.376-110.294-75.316-151.428 42.536 20.34 81.058 47.616 114.714 81.272 21.48 21.478 40.362 44.938 56.502 70.156zM185.844 249.844c33.658-33.658 72.18-60.932 114.714-81.272-30.942 41.134-56.676 92.666-75.316 151.428h-95.898c16.138-25.218 35.022-48.678 56.5-70.156zM129.344 768h95.898c18.64 58.762 44.376 110.294 75.318 151.43-42.536-20.34-81.058-47.616-114.714-81.274-21.48-21.478-40.364-44.938-56.502-70.156zM774.156 838.156c-33.656 33.658-72.18 60.934-114.714 81.274 30.942-41.134 56.678-92.668 75.316-151.43h95.9c-16.14 25.218-35.022 48.678-56.502 70.156z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="home-line7"></div>
+                </div>
+                <div class="home-container21">
+                  <h1 class="home-text049">Beta release</h1>
+                  <span class="home-text050">
+                    <span>20+ users tested</span>
+                    <br />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="home-get-started1">
+            <span class="home-text053">Ready to Deploy</span>
+          </div>
+        </section>
+        <section class="home-banners">
+          <div class="home-banner-manage">
+            <div class="home-container22">
+              <div class="home-left1">
+                <span class="home-text054 title">Ideation to Design</span>
+                <span class="home-text055">
+                  We came against with this idea in may 2022 and then
+                  immediately we started working on it, The whole process of
+                  ideation to design and then usability testing of design is
+                  covered in our full case study. Click below link to go to our
+                  case study
+                </span>
+                <a
+                  href="https://uxfol.io/p/bae8074e/03c996d9"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="home-link"
+                >
+                  <div class="home-get-started2 template-button">
+                    <span class="home-text056">Go to Case Study</span>
+                  </div>
+                </a>
+              </div>
+              <div class="home-image-container">
+                <img
+                  alt="pastedImage"
+                  src="public/playground_assets/iphone%2013%20pro-1200w.png"
+                  class="home-cards-image"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="home-banner-advanced-analytics">
+            <div class="home-centered-container1">
+              <div class="home-image-container1">
+                <img
+                  alt="pastedImage"
+                  src="public/playground_assets/apple%20iphone%2011%20pro%20max%20screenshot%200-500w.png"
+                  class="home-cards-image1"
+                />
+              </div>
+              <div class="home-right1">
+                <h2 class="home-text057 title">Development</h2>
+                <div class="home-category">
+                  <span class="home-text058">Subtitle</span>
+                  <span class="home-text059">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. vv
+                  </span>
+                </div>
+                <div class="home-category1">
+                  <span class="home-text060">Subtitle</span>
+                  <span class="home-text061">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. vv
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="home-banner">
+            <div class="home-container23">
+              <div class="home-left2">
+                <h2 class="home-text062 title">Beta Testing</h2>
+                <span class="home-text063">
+                  We released our app in our college to a limited people so that
+                  they can test it
+                </span>
+              </div>
+              <div class="home-image-container2">
+                <img
+                  alt="pastedImage"
+                  src="public/playground_assets/apple%20iphone%2011%20pro%20max%20screenshot%200-500w.png"
+                  class="home-cards-image2"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="home-how-it-works">
+          <div class="home-centered-container2">
+            <div class="home-heading1">
+              <span class="home-text064">How it works</span>
+              <span class="home-text065 title">
+                Being social and getting leads has never been easier
+              </span>
+            </div>
+            <div class="home-row">
+              <div class="home-category2">
+                <div class="home-headng">
+                  <span class="home-text066">
+                    1. Discover people from your college
+                  </span>
+                  <span class="home-text067">
+                    There are many people outside or online having skills or
+                    topic of discussion you like but that wouldn't be enough
+                    interactive as offline meeting someone from your college
+                    have your intereset.
+                  </span>
+                </div>
+              </div>
+              <div class="home-category3">
+                <div class="home-headng1">
+                  <span class="home-text068">
+                    2. Find people based on skills &amp; interests
+                  </span>
+                  <span class="home-text069">
+                    That's the thing what most of college students wants someone
+                    want a person with some skills for a collaboration or want
+                    some to talk on the same you want. which difficult to find
+                    generally.
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="home-row1">
+              <div class="home-category4">
+                <div class="home-headng2">
+                  <span class="home-text070">
+                    1. Discover people from your college
+                  </span>
+                  <span class="home-text071">
+                    There are many people outside or online having skills or
+                    topic of discussion you like but that wouldn't be enough
+                    interactive as offline meeting someone from your college
+                    have your intereset.
+                  </span>
+                </div>
+              </div>
+              <div class="home-category5">
+                <div class="home-headng3">
+                  <span class="home-text072">
+                    2. Find people based on skills &amp; interests
+                  </span>
+                  <span class="home-text073">
+                    That's the thing what most of college students wants someone
+                    want a person with some skills for a collaboration or want
+                    some to talk on the same you want. which difficult to find
+                    generally.
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="home-testimonals">
+          <div class="home-left3">
+            <span class="home-text074">Testimonals</span>
+            <span class="home-text075 title">What people say about Active</span>
+          </div>
+          <div class="home-right2">
+            <div class="home-column">
+              <div class="home-testimonal testimonal">
+                <span class="home-text076">"sdfeafesf"</span>
+                <div class="home-author">
+                  <div class="home-user">
+                    <span class="home-name">Prabhanshu Rawat</span>
+                    <span class="home-divider">—</span>
+                    <span class="home-from">
+                      Student&nbsp; &nbsp; &nbsp;&nbsp;
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="home-testimonal1 testimonal">
+                <span class="home-text077">"dsfdsfsdfsFF"</span>
+                <div class="home-author1">
+                  <div class="home-user1">
+                    <span class="home-name1">Sonia Singh</span>
+                    <span class="home-divider1">—</span>
+                    <span class="home-from1">Student</span>
+                  </div>
+                </div>
+              </div>
+              <div class="home-testimonal2 testimonal">
+                <span class="home-text078">"afewfadaeF"</span>
+                <div class="home-author2">
+                  <div class="home-user2">
+                    <span class="home-name2">Name</span>
+                    <span class="home-divider2">—</span>
+                    <span class="home-from2">asdfsfd</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="home-column1">
+              <div class="home-testimonal3 testimonal">
+                <span class="home-text079">"asfefadcaea"</span>
+                <div class="home-author3">
+                  <div class="home-user3">
+                    <span class="home-name3">Ashutosh Kumar</span>
+                    <span class="home-divider3">—</span>
+                    <span class="home-from3">Student&nbsp; &nbsp;</span>
+                  </div>
+                </div>
+              </div>
+              <div class="home-testimonal4 testimonal">
+                <span class="home-text080">"asdwdawdad"</span>
+                <div class="home-author4">
+                  <div class="home-user4">
+                    <span class="home-name4">Name</span>
+                    <span class="home-divider4">—</span>
+                    <span class="home-from4">asdfs</span>
+                  </div>
+                </div>
+              </div>
+              <div class="home-testimonal5 testimonal">
+                <span class="home-text081">asfefds</span>
+                <div class="home-author5">
+                  <div class="home-user5">
+                    <span class="home-name5">Name</span>
+                    <span class="home-divider5">—</span>
+                    <span class="home-from5">sdfsd</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <span class="home-text082">
+            <span>Show more</span>
+            <br />
+          </span>
+        </section>
+        <section class="home-action-bar">
+          <div class="home-action">
+            <div class="home-heading2">
+              <span class="home-text085 title">
+                <span>Level up your College Life</span>
+                <br />
+                <span>with BeFrend</span>
+                <br />
+              </span>
+              <span class="home-text090">
+                Get our beta app, App release could be unstable proceed on your
+                own risk.
+              </span>
+              <div class="home-get-started3 template-button">
+                <span class="home-text091">
+                  <span>Soon on Play Store</span>
+                  <br />
+                </span>
+              </div>
+            </div>
+            <div class="home-images"></div>
+          </div>
+        </section>
+        <section class="home-f-a-q">
+          <div class="home-heading3">
+            <span class="home-text094 title">Team</span>
+            <span class="home-text095">Who we are</span>
+            <div class="home-blog">
+              <div class="home-member1">
+                <img
+                  alt="pastedImage"
+                  src="public/playground_assets/pastedimage-dot-200h.png"
+                  class="home-pasted-image"
+                />
+                <div class="home-container24">
+                  <span class="home-text096">AYUSH YADAV</span>
+                  <span class="home-text097">aPP DEVELOPER</span>
+                  <span class="home-text098">Android, Kotlin,&nbsp;</span>
+                  <div class="home-container25">
+                    <div class="home-profile">
+                      <a
+                        href="https://www.linkedin.com/in/ayushunleashed/"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        class="home-link1"
+                      >
+                        <img
+                          alt="pastedImage"
+                          src="public/playground_assets/pastedimage-alsi-200h.png"
+                          class="home-pasted-image01"
+                        />
+                      </a>
+                      <a
+                        href="https://github.com/AyushUnleashed"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        class="home-link2"
+                      >
+                        <img
+                          alt="pastedImage"
+                          src="public/playground_assets/pastedimage-h2lp-200h.png"
+                          class="home-pasted-image02"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="home-member2">
+                <img
+                  alt="pastedImage"
+                  src="public/playground_assets/pastedimage-eyrb-200h.png"
+                  class="home-pasted-image03"
+                />
+                <div class="home-container26">
+                  <span class="home-text099">SONIA SINGH</span>
+                  <span class="home-text100">WEB DEVELOPER</span>
+                  <span class="home-text101">HTML, CSS, NodeJS</span>
+                  <div class="home-container27">
+                    <div class="home-profile1">
+                      <a
+                        href="https://www.linkedin.com/in/sonia-singh-b0a886240/"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        class="home-link3"
+                      >
+                        <img
+                          alt="pastedImage"
+                          src="public/playground_assets/pastedimage-alsi-200h.png"
+                          class="home-pasted-image04"
+                        />
+                      </a>
+                      <a
+                        href="https://github.com/soniasingh98"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        class="home-link4"
+                      >
+                        <img
+                          alt="pastedImage"
+                          src="public/playground_assets/pastedimage-h2lp-200h.png"
+                          class="home-pasted-image05"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="home-member3">
+                <img
+                  alt="pastedImage"
+                  src="public/playground_assets/pastedimage-eyrb-200h.png"
+                  class="home-pasted-image06"
+                />
+                <div class="home-container28">
+                  <span class="home-text102">YOGENDRA MANAWAT</span>
+                  <span class="home-text103">UI/UX, Game developer</span>
+                  <span class="home-text104">Figma, AdobeXD, Wireframe</span>
+                  <div class="home-container29">
+                    <div class="home-profile2">
+                      <a
+                        href="https://www.linkedin.com/in/ymanawat/"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        class="home-link5"
+                      >
+                        <img
+                          alt="pastedImage"
+                          src="public/playground_assets/pastedimage-alsi-200h.png"
+                          class="home-pasted-image07"
+                        />
+                      </a>
+                      <a
+                        href="https://github.com/Ymanawat"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        class="home-link6"
+                      >
+                        <img
+                          alt="pastedImage"
+                          src="public/playground_assets/pastedimage-h2lp-200h.png"
+                          class="home-pasted-image08"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <script>
+              // Accordion - Code Embed
+
+              const accordionContainers = document.querySelectorAll(".accordionContainer"); // All accordion containers
+              const accordionContents = document.querySelectorAll(".accordionContent"); // All accordion content
+              const accordionIcons = document.querySelectorAll(".accordionIcon"); // All accordion icons
+
+              accordionContents.forEach((accordionContent) => {
+                  accordionContent.style.display = "none"; //Hides all accordion contents
+              });
+
+              accordionContainers.forEach((accordionContainer, index) => {
+                  accordionContainer.addEventListener("click", () => {
+                      accordionContents.forEach((accordionContent) => {
+                          accordionContent.style.display = "none"; //Hides all accordion contents
+                      });
+
+                      accordionIcons.forEach((accordionIcon) => {
+                          accordionIcon.style.transform = "rotate(0deg)"; // Resets all icon transforms to 0deg (default)
+                      });
+
+                      if (accordionContainer.classList.contains("accordion-open")) { // Checks if this container has class "accordion-open"
+                          accordionContainer.classList.remove("accordion-open"); // Removes class "accordion-open"
+                      } else {
+                          accordionContainers.forEach((accordionContainer) => {
+                              accordionContainer.classList.remove("accordion-open"); // Removes class "accordion-open" from all containers
+                          });
+
+                          accordionContainer.classList.add("accordion-open"); // Adds class "accordion-open" to this container
+                          accordionContents[index].style.display = "flex"; // Shows accordion content
+                          accordionIcons[index].style.transform = "rotate(180deg)"; // Rotates accordion icon 180deg
+                      }
+                  });
+              });
+
+              /*
+              Here's what the above is doing:
+                  1. Selects all accordion containers, contents, and icons
+                  2. Hides all accordion contents
+                  3. Adds an event listener to each accordion container
+                  4. When an accordion container is clicked, it:
+                      - Hides all accordion contents
+                      - Resets all icon transforms to 0deg (default)
+                      - Checks if this container has class "accordion-open"
+                          - If it does, it removes class "accordion-open"
+                          - If it doesn't, it:
+                              - Removes class "accordion-open" from all containers
+                              - Adds class "accordion-open" to this container
+                              - Shows accordion content
+                              - Rotates accordion icon 180deg
+              */
+            </script>
+          </div>
+        </section>
+        <footer class="home-footer">
+          <div class="home-top">
+            <div class="home-left4">
+              <span class="home-text105">Subscribe to our newsletter</span>
+              <div class="home-subscription">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  class="home-textinput input"
+                />
+                <div class="home-subscribe">
+                  <span class="home-text106">Subscribe</span>
+                </div>
+              </div>
+              <span class="home-text107">
+                By subscribing to our newsletter you agree with our Terms and
+                Conditions.
+              </span>
+              <div class="home-contact">
+                <span class="home-text108">Contact</span>
+                <a
+                  href="https://www.linkedin.com/company/befrend/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="home-link7"
+                >
+                  https://www.linkedin.com/company/befrend/
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="home-bottom">
+            <img
+              alt="pastedImage"
+              src="public/playground_assets/pastedimage-46v2-200h.png"
+              class="home-pasted-image09"
+            />
+            <span class="home-text109">Copyright © BeFrend - 2022</span>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
