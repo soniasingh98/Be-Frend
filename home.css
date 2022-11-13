@@ -1898,6 +1898,12 @@
   line-height: 30px;
 }
 @media(max-width: 991px) {
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 250px;
+  }
   .home-hero {
     padding-left: var(--dl-space-space-oneandhalfunits);
     padding-right: var(--dl-space-space-oneandhalfunits);
